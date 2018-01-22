@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,55 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="rxplayground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpQ-cg-iYd">
+                                <rect key="frame" x="0.0" y="356.5" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SAm-dh-2Ip">
+                                <rect key="frame" x="0.0" y="318.5" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayL-Ot-pTg">
+                                <rect key="frame" x="0.0" y="385.5" width="375" height="30"/>
+                                <state key="normal" title="Sync"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhY-Fa-xvO">
+                                <rect key="frame" x="0.0" y="423.5" width="375" height="30"/>
+                                <state key="normal" title="Async"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ayL-Ot-pTg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3v5-RL-umO"/>
+                            <constraint firstItem="IhY-Fa-xvO" firstAttribute="top" secondItem="ayL-Ot-pTg" secondAttribute="bottom" constant="8" id="64X-vh-tYH"/>
+                            <constraint firstItem="IhY-Fa-xvO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ajw-jg-NiU"/>
+                            <constraint firstItem="SAm-dh-2Ip" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F1c-dA-bhe"/>
+                            <constraint firstItem="ayL-Ot-pTg" firstAttribute="top" secondItem="WpQ-cg-iYd" secondAttribute="bottom" constant="8" id="IKL-gW-0eQ"/>
+                            <constraint firstItem="SAm-dh-2Ip" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Sie-el-c3D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IhY-Fa-xvO" secondAttribute="trailing" id="TQH-qM-ANa"/>
+                            <constraint firstItem="WpQ-cg-iYd" firstAttribute="top" secondItem="SAm-dh-2Ip" secondAttribute="bottom" constant="8" id="dWl-sb-Tvg"/>
+                            <constraint firstItem="WpQ-cg-iYd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l6r-g1-5g4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WpQ-cg-iYd" secondAttribute="trailing" id="ov2-Vq-mfd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SAm-dh-2Ip" secondAttribute="trailing" id="qfV-pP-TZ0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ayL-Ot-pTg" secondAttribute="trailing" id="zug-nt-e6Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonAsync" destination="IhY-Fa-xvO" id="QQt-a5-gsh"/>
+                        <outlet property="buttonSync" destination="ayL-Ot-pTg" id="Wkm-0b-uam"/>
+                        <outlet property="input" destination="SAm-dh-2Ip" id="ppf-oj-8hf"/>
+                        <outlet property="result" destination="WpQ-cg-iYd" id="YdP-eC-FQH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
