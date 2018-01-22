@@ -12,6 +12,7 @@
 		9949A77A2016348B00D7B15A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9949A7782016348B00D7B15A /* Main.storyboard */; };
 		9949A77C2016348B00D7B15A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9949A77B2016348B00D7B15A /* Assets.xcassets */; };
 		9949A77F2016348B00D7B15A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9949A77D2016348B00D7B15A /* LaunchScreen.storyboard */; };
+		E4211E5C31A94E6AE446EA44 /* Pods_rxplayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ECE59B679236A21FB6A304 /* Pods_rxplayground.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		9949A77B2016348B00D7B15A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9949A77E2016348B00D7B15A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9949A7802016348B00D7B15A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F18936D93CC1B5B06E44DF2 /* Pods-rxplayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxplayground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rxplayground/Pods-rxplayground.debug.xcconfig"; sourceTree = "<group>"; };
+		A553C31545E5A3CCDB3E8598 /* Pods-rxplayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxplayground.release.xcconfig"; path = "Pods/Target Support Files/Pods-rxplayground/Pods-rxplayground.release.xcconfig"; sourceTree = "<group>"; };
+		C2ECE59B679236A21FB6A304 /* Pods_rxplayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rxplayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4211E5C31A94E6AE446EA44 /* Pods_rxplayground.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		393A87050BD9DDF3A58440BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F18936D93CC1B5B06E44DF2 /* Pods-rxplayground.debug.xcconfig */,
+				A553C31545E5A3CCDB3E8598 /* Pods-rxplayground.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9949A7682016348B00D7B15A = {
 			isa = PBXGroup;
 			children = (
 				9949A7732016348B00D7B15A /* rxplayground */,
 				9949A7722016348B00D7B15A /* Products */,
+				393A87050BD9DDF3A58440BB /* Pods */,
+				BA9A1FE80FD7A70A490F86AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = rxplayground;
 			sourceTree = "<group>";
 		};
+		BA9A1FE80FD7A70A490F86AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2ECE59B679236A21FB6A304 /* Pods_rxplayground.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9949A7832016348B00D7B15A /* Build configuration list for PBXNativeTarget "rxplayground" */;
 			buildPhases = (
+				A1FBB6FB164ADD4B68B06DAB /* [CP] Check Pods Manifest.lock */,
 				9949A76D2016348B00D7B15A /* Sources */,
 				9949A76E2016348B00D7B15A /* Frameworks */,
 				9949A76F2016348B00D7B15A /* Resources */,
+				4270C60D16D8EF23637B699F /* [CP] Embed Pods Frameworks */,
+				FA89B4741C2F62C091B0294A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4270C60D16D8EF23637B699F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-rxplayground/Pods-rxplayground-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rxplayground/Pods-rxplayground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1FBB6FB164ADD4B68B06DAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rxplayground-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA89B4741C2F62C091B0294A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rxplayground/Pods-rxplayground-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9949A76D2016348B00D7B15A /* Sources */ = {
@@ -272,6 +355,7 @@
 		};
 		9949A7842016348B00D7B15A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F18936D93CC1B5B06E44DF2 /* Pods-rxplayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +370,7 @@
 		};
 		9949A7852016348B00D7B15A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A553C31545E5A3CCDB3E8598 /* Pods-rxplayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
